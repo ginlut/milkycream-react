@@ -1,0 +1,18 @@
+.CartWidget {
+    background-color: azure;
+    border-radius: 20%;
+    flex: none;
+    order: 1;
+    align-self: center;
+    flex-grow: 0;
+    align-items: center;
+    text-decoration: none;
+    border-style: none;
+    cursor: pointer;
+    outline: inherit;
+    padding: 12px;
+}
+
+.cartImg {
+    width: 40px;
+}
