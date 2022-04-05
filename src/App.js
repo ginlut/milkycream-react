@@ -14,12 +14,12 @@ const App = () => {
    }
  
    return (
-       <div className="App">  
-        <NavBar />
-        <ItemListContainer greeting={'Bienvenido a Milkycream'} />
-         { show ? <Counter initial={0} stock={10} onAdd={handleOnAdd}/> : null }
-       </div>
-   );
+    <div className="App">  
+     <NavBar />
+     <ItemListContainer greeting={'Bienvenido a Milkycream'} />
+     { show && <Counter initial={1} stock={10} onAdd={handleOnAdd}/> }
+    </div>
+);
  }
 
 export default App;

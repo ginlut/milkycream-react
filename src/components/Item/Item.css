@@ -1,0 +1,29 @@
+.cajaProducto {
+    color: #66d6e0;
+    text-align: center;
+    background-color: azure;
+}
+
+.botonProductos {
+    font-size: 15px;
+    color: #921176;
+    text-align: center;
+    padding: 2px;
+    width: 40%;
+    font-weight: bold;
+}
+
+.card-text {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fotosProductos {
+    width: 80%;
+}
+
+.fondoCard {
+    background-color: azure;
+}
