@@ -18,6 +18,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    color: black;
+    font-size: 1.2rem;
 }
 
 .fotosProductos {
@@ -26,4 +28,8 @@
 
 .fondoCard {
     background-color: azure;
+}
+
+.card {
+    align-items: center;
 }

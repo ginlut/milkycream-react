@@ -3,23 +3,10 @@
     padding: 0;
 }
 
-.NavBar {
+.navBar {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 60px;
     background-image: linear-gradient(#e448c2, #66d6e0);
-}
-
-.option {
-    background-image: linear-gradient(#e448c2, #66d6e0);
-    display: flex;
-    flex: none;
-    order: 1;
-    align-self: center;
-    flex-grow: 0;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    outline: inherit;
+    color: black
 }

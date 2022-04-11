@@ -1,10 +1,11 @@
 import { useState } from 'react'
-import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import Counter from './components/ItemCount/ItemCount';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 
 
 const App = () => {
@@ -14,11 +15,14 @@ const App = () => {
    }
  
    return (
-    <div className="App">  
-     <NavBar />
-     <ItemListContainer greeting={'Bienvenido a Milkycream'} />
-     { show && <Counter initial={1} stock={10} onAdd={handleOnAdd}/> }
-    </div>
+            <BrowserRouter>
+            <NavBar />
+            <Routes>
+              <Route path='/' element={<ItemListContainer />} />
+              <Route path='/category/:categoryId' element={<ItemListContainer />} />
+              <Route path='/detail/:productId' element={<ItemDetailContainer />} />
+            </Routes>
+          </BrowserRouter>
 );
  }
 
