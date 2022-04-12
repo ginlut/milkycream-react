@@ -29,8 +29,8 @@ const ItemDetailContainer = () => {
         <div className="ItemDetailContainer" >
 
             { loading ? 
-                <img src="https://cdn.dribbble.com/users/1415819/screenshots/4061539/icecream_8.gif" className="loadImg"></img> :
-                product ? 
+                <img src="https://cdn.dribbble.com/users/1415819/screenshots/4061539/icecream_8.gif" className="loadImg" alt="cargando"/> :
+                product ?  
                     <ItemDetail  {...product} /> :
                     <h1>El producto no existe</h1> 
             }
