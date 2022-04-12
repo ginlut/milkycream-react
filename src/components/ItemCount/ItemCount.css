@@ -1,0 +1,16 @@
+.contador {
+    display: flex;
+    justify-content: space-evenly;
+    color: black;
+    padding: 1rem
+}
+
+.botonContador {
+    font-size: 15px;
+    color: #921176;
+    text-align: center;
+    padding: 2px;
+    width: 10%;
+    font-weight: bold;
+    border-radius: 20%;
+}

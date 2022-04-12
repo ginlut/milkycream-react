@@ -33,3 +33,13 @@
 .card {
     align-items: center;
 }
+
+.titulo {
+    font-size: 25px;
+    font-style: italic;
+    font-family: 'Dancing Script', cursive;
+}
+
+.loadImg {
+    width: 100%;
+}

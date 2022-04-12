@@ -26,11 +26,11 @@ const NavBar = () => {
 
         <Navbar className="navBar" expand="lg">
             <Container fluid>
-                <Navbar.Brand href="#">Milkycream</Navbar.Brand>
+                <Navbar.Brand href="/" className="titulo">Milkycream</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-                        <Nav.Link href="#action1">Inicio</Nav.Link>
+                        <Nav.Link href="/">Inicio</Nav.Link>
                         <NavDropdown title="Categorías" id="navbarScrollingDropdown">
                         { categories.map(cat => <NavDropdown.Item key={cat.id} href={`/category/${cat.id}`} >{cat.description}</NavDropdown.Item>)}
                         </NavDropdown>
