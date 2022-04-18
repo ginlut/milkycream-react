@@ -5,7 +5,8 @@ const products = [{
         img: 'https://i.ibb.co/7QLfQ4W/7-maravillas.jpg',
         stock: 25,
         description: 'Helado de chocolate, chantilly, chocolisto, minibrownies, nutella y gotas de chocolate.',
-        category: 'milkshake'
+        category: 'milkshake',
+        stock: 10,
     },
     {
         id: '2',
@@ -14,7 +15,8 @@ const products = [{
         img: 'https://i.ibb.co/SxSNNS6/frutos-rojos.jpg',
         stock: 25,
         description: 'Helado de Fresa y vainilla con salsa de fresa, crema chantilly y cerezas',
-        category: 'milkshake'
+        category: 'milkshake',
+        stock: 10,
     },
     {
         id: '3',
@@ -23,7 +25,8 @@ const products = [{
         img: 'https://i.ibb.co/zVWLZ4P/import-xxl.jpg',
         stock: 25,
         description: 'Helado de chocolate, Ferrero Rocher, kinder bueno, nutella y gotas de chocolate.',
-        category: 'malteada'
+        category: 'malteada',
+        stock: 10,
     },
     {
         id: '4',
@@ -32,12 +35,13 @@ const products = [{
         img: 'https://i.ibb.co/K0mXssD/genovesa.jpg',
         stock: 25,
         description: 'Helado Tres leches, chantilly, arequipe, salsa de chocolate y piazza',
-        category: 'malteada'
+        category: 'malteada',
+        stock: 10,
     }
 ]
 const categories = [
-    {id: 'malteada', description: 'Malteadas'},
-    {id: 'milkshake', description: 'Milkshakes'},
+    { id: 'malteada', description: 'Malteadas' },
+    { id: 'milkshake', description: 'Milkshakes' },
 
 ]
 
@@ -51,7 +55,7 @@ export const getProducts = (categoryId) => {
 
 
 export const getProductsById = (id) => {
-    return new Promise (resolve => {
+    return new Promise(resolve => {
         setTimeout(() => {
             resolve(products.find(prod => prod.id === id))
         }, 2000)

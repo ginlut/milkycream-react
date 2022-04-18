@@ -1,10 +1,13 @@
 import Counter from '../ItemCount/ItemCount'
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const ItemDetail = ({ id, title, img, category, description, price}) => {
-    const [show, setShow] = useState(true)
+    const [quantity, setQuantity] = useState(0) 
+
     const handleOnAdd = (quantity) => {
      console.log(`${quantity} productos fueron añadidos al carrito`)
+     setQuantity(quantity)
    }
     return (
         <article className="card col-md-3">
@@ -15,7 +18,7 @@ const ItemDetail = ({ id, title, img, category, description, price}) => {
                 </picture>
                 <div className="card-text"> Categoría: {category}</div>
                 <div className="card-text"> Descripción: {description}</div>  
-                { show && <Counter initial={1} stock={10} onAdd={handleOnAdd}/> }   
+                {quantity > 0 ? <Link to='/cart'>Terminar Compra</Link> : <Counter initial={1} stock={10} onAdd={handleOnAdd}/> }   
                 <footer className='card-footer'> Precio: ${price}</footer>
 
             </div>

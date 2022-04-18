@@ -6,7 +6,7 @@ import NavDropdown from 'react-bootstrap/NavDropdown'
 import Container from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form';
-import { Link, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import { getCategories } from '../../asyncmock'
 
@@ -26,18 +26,18 @@ const NavBar = () => {
 
         <Navbar className="navBar" expand="lg">
             <Container className="fluid">
-                <Navbar.Brand href="/" className="titulo">Milkycream</Navbar.Brand>
+                <NavLink to="/" className="titulo navbar-brand">Milkycream</NavLink>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-                        <Nav.Link href="/">Inicio</Nav.Link>
+                        <NavLink to="/" data-rr-ui-event-key className="nav-link">Inicio</NavLink>
                         <NavDropdown title="Categorías" id="navbarScrollingDropdown">
-                        { categories.map(cat => <NavDropdown.Item key={cat.id} href={`/category/${cat.id}`} >{cat.description}</NavDropdown.Item>)}
+                        { categories.map(cat => <NavLink key={cat.id} to={`/category/${cat.id}`} className="dropdown-item">{cat.description}</NavLink>)}
                         </NavDropdown>
                     </Nav>
                     <Form className="d-flex">
                         <input
-                        type="search"
+                        type="search"       
                         placeholder="Search"
                         className="me-2 form-control"
                         aria-label="Search"

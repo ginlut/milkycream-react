@@ -12,6 +12,7 @@ const ItemListContainer = (props) => {
   const { categoryId } = useParams()
 
   useEffect(() => {
+    setLoading(true)
       getProducts(categoryId).then(prods => {
           setProducts(prods)
       }).catch(error => {
