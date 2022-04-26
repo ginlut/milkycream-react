@@ -23,7 +23,7 @@ const ItemDetail = ({ id, title, img, category, description, price, stock}) => {
                 </picture>
                 <div className="card-text"> Categoría: {category}</div>
                 <div className="card-text"> Descripción: {description}</div>  
-                {isInCart(id) ? <Link to='/cart'>Terminar Compra</Link> : <Counter initial={1} stock={stock} onAdd={handleOnAdd}/> }   
+                {isInCart(id) ? <Link to='/cart'>Terminar mi compra</Link> : <Counter initial={1} stock={stock} onAdd={handleOnAdd}/> }   
                 <footer className='card-footer'> Precio: ${price}</footer>
 
             </div>
