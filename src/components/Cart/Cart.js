@@ -7,7 +7,9 @@ import './Cart.css'
 
 const Cart =() => {
 
-  const { cart } = useContext(CartContext)
+  const { cart, clearCart, getTotal } = useContext(CartContext)
+     
+
 
   if(cart.length === 0) {
       return (<>
@@ -20,6 +22,10 @@ const Cart =() => {
     <>
     <h1>Carrito</h1>
     <ItemCart/>
+    <p>El total de su compra es de { getTotal() } $</p>
+    <button onClick={clearCart} > Vaciar carrito
+
+    </button>
     </>
   )
 }

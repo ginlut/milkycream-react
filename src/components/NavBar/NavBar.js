@@ -8,7 +8,8 @@ import Nav from 'react-bootstrap/Nav'
 import Form from 'react-bootstrap/Form';
 import { NavLink } from 'react-router-dom'
 import { useState, useEffect } from 'react'
-import { getCategories } from '../../asyncmock'
+import { firestoreDb } from '../../services/firebase'
+import { getDocs, collection, query } from 'firebase/firestore'
 
 
 
@@ -17,11 +18,13 @@ const NavBar = () => {
     const [categories, setCategories] = useState([])
 
     useEffect(() => {
-      getCategories().then(categories => {
-        setCategories(categories)
-      })
-    }, [])
-
+        getDocs(query(collection(firestoreDb, 'categories'))).then(response => {
+            const categories = response.docs.map(doc => {
+              return { id: doc.id, ...doc.data()}
+            })
+            setCategories(categories)
+          })
+        }, [])
     return ( 
 
         <Navbar className="navBar" expand="lg">
