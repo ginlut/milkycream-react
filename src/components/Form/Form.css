@@ -1,0 +1,26 @@
+.form {
+    border-style: solid;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.formInput {
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    background-color: azure;
+}
+
+input {
+    margin: 10px;
+    border-radius: 15px;
+    background-color: #66d6e0;
+    height: 20px;
+    margin-top: 15px;
+}
+
+.contenedorProductos {
+    display: flex;
+    justify-content: center;
+}

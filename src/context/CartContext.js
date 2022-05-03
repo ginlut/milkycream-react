@@ -39,6 +39,10 @@ export const CartContextProvider = ({ children }) => {
         return count
     }
     
+    const getQuantityProd = (id) => {
+        return cart.find(prod => prod.id === id)?.quantity
+    }
+    
     const isInCart = (id) => {
         return cart.some(product => product.id === id )
     }
@@ -68,6 +72,7 @@ export const CartContextProvider = ({ children }) => {
             isInCart,
             clearCart,
             removeItem,
+            getQuantityProd,
             getTotal
         }}>
             {children}
