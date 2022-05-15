@@ -34,7 +34,7 @@ npm start
 
 ## Ejecutando las pruebas ⚙️
 
-_La página web generada luego de realizar el npm start permitirá realizar las pruebasnecesarias sobre la funcionalidad del proyecto, desde la visualización deun catalogo total y por categorías, hasta la generación de una orden de compra a firebase_
+_La página web generada luego del npm start permitirá realizar las pruebas necesarias sobre la funcionalidad del proyecto, desde la visualización de un catálogo total y por categorías, hasta la generación de una orden de compra a firebase._
 
 
 ## Construido con 🛠️
@@ -46,23 +46,23 @@ _La página web generada luego de realizar el npm start permitirá realizar las 
 
 ### Herramientas 🛠️
 
-* [Boostrap](https://react-bootstrap.github.io/) - clases y estilos del proyecto
+* [Boostrap](https://react-bootstrap.github.io/) - clases y estilos del proyecto.
 
-* [Firebase](https://console.firebase.google.com/u/0/) - base de datos
+* [Firebase](https://console.firebase.google.com/u/0/) - base de datos.
 
-* [Fontawesome](https://fontawesome.com/icons) - íconos del proyecto
+* [Fontawesome](https://fontawesome.com/icons) - íconos del proyecto.
 
-* [Sweetalert2](https://sweetalert2.github.io/#examples) - alerta de orden de  compra generada
+* [Sweetalert2](https://sweetalert2.github.io/#examples) - alerta de orden de  compra generada.
 
 ## Services/Firebase📋
 
-_Durante el proyecto se utiliza FireBase como servicio de almacenamiento, consulta, hosting y monitoreo, el cual se encuentra en toda la aplicación y el ciclo de desarrollo del mismo_
+_Durante el proyecto se utiliza FireBase como servicio de almacenamiento, consulta, hosting y monitoreo, el cual se encuentra en toda la aplicación y el ciclo de desarrollo del mismo._
 
 _El componente se encuentra dividido por las siguientes colecciones:_
 
 * categories: categoría de los productos a ofrecer.
 
-* orders: orden de compra generada desde el componente Form, la cual envía datos asociados al comprador al fireBase.
+* orders: orden de compra generada desde el componente Form, la cual envía datos asociados al comprador al FireBase.
 
 * products: datos asociados a los productos a ofrecer.
 
@@ -70,7 +70,7 @@ _El componente se encuentra dividido por las siguientes colecciones:_
 
 ### NavBar
 
-_Crea una barra de Navegación mediante la cual se puede acceder al total de los productos o las categorías de los mismos. Adicionalmente muestra el CartWidget desdeel cual se puede acceder a los productos agregados al carrito._ 
+_Crea una barra de Navegación mediante la cual se puede acceder al total de los productos o las categorías de los mismos. Adicionalmente muestra el CartWidget desde el cual se puede acceder a los productos agregados al carrito._ 
 
 ### Item
 
@@ -78,7 +78,7 @@ _Genera una card en la cual aparecen los datos asociados a nombre, imagen y prec
 
 ### ItemList - ItemListContainer
 
-_ItemList e ItemListContainer se encargan de setear los productos en la pantalla principal, llamando a la función Item, cargando todos los datos que se indican en ese componente y mapeando el filtro de los productos, el cual se encuentra categorizado en FireBase. Adicionalmente, muestra una imagen de cargado cuando la página se encuentra en dicho proceso._
+_ItemList e ItemListContainer se encargan de setear los productos en la pantalla principal llamando a la función Item, cargando todos los datos que se indican en ese componente y mapeando el filtro de los productos, el cual se encuentra categorizado en FireBase. Adicionalmente, muestra una imagen de cargado cuando la página se encuentra en dicho proceso._
 
 ### ItemDetail - ItemDetailContainer
 
@@ -92,13 +92,13 @@ _Genera la funcionalidad mediante la cual el usuario puede sumar o restar produc
 
 _ItemCart es una función que mapea todos los datos asociados a los productos agregados al cart, generando además un subtotal de compra necesario cuando se agregan varios productos del mismo ítem y permitiendo al usuario eliminar items que no desee en su compra._
 
-_El Cart contiene varias funcionalidades: a) Genera un mensaje cuando no hay productos en el carrito e invita al usuario a ver los productosdisponibles; b) Llama a la función ItemCart y genera un total por todos los ítems que fueron agregados al carrito; c) Contiene 3 botones con acción: Vaciar carrito (elimina todos los elementos agregados), Seguir comprando (redirige a la página principal para seguir viendo productos antes de finalizar la compra) y Continuar Compra (redirige al Form para culminar el proceso)._
+_El Cart contiene varias funcionalidades: a) Genera un mensaje cuando no hay productos en el carrito e invita al usuario a ver los productos disponibles; b) Llama a la función ItemCart y genera un total por todos los ítems que fueron agregados al carrito; c) Contiene 3 botones con acción: Vaciar carrito (elimina todos los elementos agregados), Seguir comprando (redirige a la página principal para seguir viendo productos antes de finalizar la compra) y Continuar Compra (redirige al Form para culminar el proceso)._
 
 _El CartWidged muestra una imagen de un carrito desde la cual se puede acceder a los productos agregados al cart, además de llamar a la función de getQuantity, la cual detalla en pantalla la cantidad de productos que se encuentran en el mismo._
 
 ### Form
 
-_Es un formulario que solicita los datos del cliente y genera una orden de compra que se dirige a FireBase como una coleeción. Adicionalmente contiene una función para indicar cuando un producto se encuentra sin stock, y un mensaje final una vez realizada la compra._
+_Es un formulario que solicita los datos del cliente y genera una orden de compra que se dirige a FireBase como una colección. Adicionalmente contiene una función para indicar cuando un producto se encuentra sin stock, y un mensaje final una vez realizada la compra._
 
 
 ## Funciones Context📋
