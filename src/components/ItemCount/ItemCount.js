@@ -12,6 +12,10 @@ const Counter = ({initial, stock, onAdd}) => {
         setCount(count + 1)
     }
 
+    if(stock === 0) {
+        return <button className='Option' disabled>Lo sentimos, no hay stock</button>
+    }
+
     return(
         <div>
             <div className="contador">

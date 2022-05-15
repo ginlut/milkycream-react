@@ -1,0 +1,52 @@
+.redirectHome {
+    text-align: center;
+}
+
+.noUnderline {
+    text-decoration: none;
+    color: black;
+}
+
+.productInCart {
+    border-left: 5px solid #66d6e0;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+    margin: 5px 0;
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+}
+
+.productInCart:hover {
+    border-left: 5px solid #e448c2;
+}
+
+.center {
+    display: flex;
+    justify-content: space-around;
+    margin: 2%
+}
+
+.containerCart {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: space-around
+}
+
+.btnDelete {
+    color: #921176;
+    background-color: azure;
+    border: none;
+    font-size: 20px;
+}
+
+.btnDelete :hover {
+    cursor: pointer;
+}
+
+h2 {
+    font-size: 1.2rem;
+}

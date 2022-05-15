@@ -14,18 +14,24 @@ const Cart =() => {
  
   if(getQuantity() === 0) {
       return (<>
-          <h1>No hay productos en el carrito</h1>
-          <Link to='/'>¡Mira nuestros productos!</Link></>
+          <h1 className='subtitle'>No hay productos en el carrito</h1>
+          <p className='redirectHome'> <Link to='/' className='noUnderline'>¡Mira nuestros productos!</Link></p></>
       )
   }
 
   return (
     <>
-    <h1>Carrito</h1>
-    <ItemCart/>
-    <p>El total de su compra es de { getTotal() } $</p>
-    <button onClick={clearCart} > Vaciar carrito  </button>
-    <NavLink to='/Form'><button>Terminar compra</button></NavLink>
+    <div className='containerCart'>
+      <h1 className='subtitle'>Carrito</h1>
+      <ItemCart/>
+
+    </div>
+    <h2>El total de su compra es de { getTotal() } pesos</h2>
+    <div className='center'>
+        <button onClick={clearCart} className="btn btn-outline-info "> Vaciar carrito  </button>
+        <NavLink to='/' ><button className="btn btn-outline-info ">Seguir comprando </button></NavLink>
+        <NavLink to='/Form' ><button className="btn btn-outline-info ">Continuar compra</button></NavLink>
+      </div>
     </>
   )
 }

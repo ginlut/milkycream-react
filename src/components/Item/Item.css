@@ -1,16 +1,37 @@
-.cajaProducto {
+.productBox {
     color: #66d6e0;
     text-align: center;
     background-color: azure;
 }
 
-.botonProductos {
+button {
     font-size: 15px;
     color: #921176;
     text-align: center;
-    padding: 2px;
-    width: 40%;
+    padding: 10px;
     font-weight: bold;
+    border-radius: 5%;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #66d6e0;
+}
+
+.btn-outline-info:hover {
+    background-color: #921176;
+    border-color: #e448c2;
+    color: azure;
+}
+
+.cardBorder {
+    margin: 2%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
+}
+
+.margin {
+    margin: 0.3%;
 }
 
 .card-text {
@@ -18,7 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    color: black;
+    color: #921176;
     font-size: 1.2rem;
 }
 
@@ -32,6 +53,7 @@
 
 .card {
     align-items: center;
+    border: none;
 }
 
 .titulo {
@@ -42,4 +64,28 @@
 
 .loadImg {
     width: 100%;
+}
+
+.row {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center
+}
+
+.itemDetail {
+    display: flex;
+    justify-content: center;
+}
+
+.productBoxDetail {
+    color: #66d6e0;
+    text-align: center;
+    background-color: azure;
+    margin: 2%;
+    border: 1px solid rgba(0, 0, 0, .125);
+    border-radius: 0.25rem;
 }

@@ -7,9 +7,9 @@ const CartWidget=() =>{
   const { getQuantity } = useContext(CartContext)
   return(
     <div className="CartWidget d-flex justify-content-center">
-      <Link to="/cart">
+      <Link to="/cart"  className="noUnderline ">
         <img src='https://i.ibb.co/TP386VN/carrito-de-compras.png' alt='carrito' className="cartImg"/>
-        { getQuantity() }
+        { getQuantity()}
       </Link>
     </div>
   )

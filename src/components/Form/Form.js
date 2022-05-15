@@ -4,11 +4,14 @@ import CartContext from "../../context/CartContext"
 import {useContext} from 'react'
 import './Form.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { NavLink } from 'react-router-dom'
+import Swal from 'sweetalert2'
+
 
 
 const Form =() =>{
 
-  const { cart } = useContext(CartContext)
+  const { clearCart, cart } = useContext(CartContext)
 
 
   const createOrder = () => {
@@ -60,29 +63,40 @@ const Form =() =>{
       }).then(({ id }) => {
           batch.commit()
           console.log(`El id de la orden es ${id}`)
-      }).catch(error => {
+          clearCart()
+          Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: '¡Muchas gracias por su compra!',
+            text: `El id de la orden es ${id}`,
+            showConfirmButton: true,
+            timer: 7000
+        })
+
+       }).catch(error => {
           console.log(error)
       })
+
 }
 
 return(
   <div>
-    <h1 className='noMargin'>Indícanos tus datos de contacto</h1>
-    <div className='contenedorProductos'>
-        <div className='form'>
-            <div className='formInput'>
-                <p>Nombre y Apellido:</p>
-                <input type='text' id='nombre'/>
+    <h1 className='subtitle'>Indícanos tus datos de contacto</h1>
+    <div className='contenedorProductos '>
+        <div className='seccionesPedidos form'>
+            <div className='input-group mb-3'>
+                <label className='input-group-text'>Nombre y Apellido:</label>
+                <input type='text' id='nombre' className='form-control' required/>
             </div>
-            <div className='formInput'>
-                <p>Correo electrónico:</p>
-                <input type='email' id='email'/>
+            <div className='input-group mb-3'>
+                <label className='input-group-text'>Correo electrónico:</label>
+                <input type='email' id='email'className='form-control' required/>
             </div>
-            <div className='formInput'>
-                <p>Número telefónico:</p>
-                <input type='text' id='phone'/>
+            <div className='input-group mb-3'>
+                <label className='input-group-text'>Número telefónico:</label>
+                <input type='text' id='phone'className='form-control' required/>
             </div>
-            <button onClick={() => createOrder()} className='botonEliminarProducto'>Generar Orden</button>
+            <NavLink to='/'><button onClick={() => createOrder()}>Generar Orden</button></NavLink>
         </div>
     </div>
 </div>
