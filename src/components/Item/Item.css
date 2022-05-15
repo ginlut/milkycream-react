@@ -43,12 +43,8 @@ button:hover {
     font-size: 1.2rem;
 }
 
-.fotosProductos {
+.productsImg {
     width: 80%;
-}
-
-.fondoCard {
-    background-color: azure;
 }
 
 .card {

@@ -7,7 +7,7 @@ const Item = ({ id, title, img, price }) => {
             <div className = "cardBorder">
                 <div className = " productBox" >
                     <h3 className = "card-header" > { title } </h3> 
-                    <picture className = "d-flex align-items-center"><img src = {img} alt={title} className="fotosProductos img-fluid rounded mx-auto d-block" />
+                    <picture className = "d-flex align-items-center"><img src = {img} alt={title} className="productsImg img-fluid rounded mx-auto d-block" />
                     </picture> 
                     <h4 className = "card-text" >  Precio: ${price} </h4>
                 </div> 

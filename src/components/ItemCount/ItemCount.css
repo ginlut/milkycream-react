@@ -1,11 +1,11 @@
-.contador {
+.counter {
     display: flex;
     justify-content: space-evenly;
     color: black;
     padding: 1rem
 }
 
-.botonContador {
+.btnCounter {
     font-size: 15px;
     color: #921176;
     text-align: center;

@@ -1,9 +1,9 @@
-.contenedorProductos {
+.containerProducts {
     display: flex;
     justify-content: center;
 }
 
-.seccionesPedidos {
+.form {
     padding: 4%;
     border: solid 1px gray;
     background-color: azure;

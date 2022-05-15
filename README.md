@@ -1,70 +1,124 @@
-# Getting Started with Create React App
+# Milkycream
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+_Milkycream es un proyecto desarrollado para el curso de ReactJS de CoderHouse, se trata de un e-commerce desinado a la venta de helados, milkshakes, entre otros productos afines_
 
-## Available Scripts
+## Comenzando 🚀
 
-In the project directory, you can run:
+_Estas instrucciones te permitirán obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-### `npm start`
+### Instalación con git clone🔧
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+_Para acceder al proyecto clonándolo debe ejecutarse en la consola:_
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+git clone  https://github.com/ginlut/milkycream-react.git
+npm install 
+npm start
+```
 
-### `npm test`
+### Instalación con git clone🔧
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+_Para descargar el proyecto y revisarlo mediante descarga de ZIP, es necesario:_
 
-### `npm run build`
+```
+Ir a “Code” en Github > Download ZIP
+Descomprimir archivo ZIP en tu pc
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+_Una vez el proyecto se encuentre en el equipo, debe ejecutarse en la terminal:_
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```
+npm install 
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Ejecutando las pruebas ⚙️
 
-### `npm run eject`
+_La página web generada luego de realizar el npm start permitirá realizar las pruebasnecesarias sobre la funcionalidad del proyecto, desde la visualización deun catalogo total y por categorías, hasta la generación de una orden de compra a firebase_
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Construido con 🛠️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* HTML
+* CSS
+* JavaScript
+* ReactJS
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+### Herramientas 🛠️
 
-## Learn More
+* [Boostrap](https://react-bootstrap.github.io/) - clases y estilos del proyecto
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+* [Firebase](https://console.firebase.google.com/u/0/) - base de datos
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* [Fontawesome](https://fontawesome.com/icons) - íconos del proyecto
 
-### Code Splitting
+* [Sweetalert2](https://sweetalert2.github.io/#examples) - alerta de orden de  compra generada
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Services/Firebase📋
 
-### Analyzing the Bundle Size
+_Durante el proyecto se utiliza FireBase como servicio de almacenamiento, consulta, hosting y monitoreo, el cual se encuentra en toda la aplicación y el ciclo de desarrollo del mismo_
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+_El componente se encuentra dividido por las siguientes colecciones:_
 
-### Making a Progressive Web App
+* categories: categoría de los productos a ofrecer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+* orders: orden de compra generada desde el componente Form, la cual envía datos asociados al comprador al fireBase.
 
-### Advanced Configuration
+* products: datos asociados a los productos a ofrecer.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Componentes📋
 
-### Deployment
+### NavBar
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+_Crea una barra de Navegación mediante la cual se puede acceder al total de los productos o las categorías de los mismos. Adicionalmente muestra el CartWidget desdeel cual se puede acceder a los productos agregados al carrito._ 
 
-### `npm run build` fails to minify
+### Item
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+_Genera una card en la cual aparecen los datos asociados a nombre, imagen y precio de cada producto, asimismo, contiene un botón que indica Ver Detalle que redirige al componente ItemDetail._
+
+### ItemList - ItemListContainer
+
+_ItemList e ItemListContainer se encargan de setear los productos en la pantalla principal, llamando a la función Item, cargando todos los datos que se indican en ese componente y mapeando el filtro de los productos, el cual se encuentra categorizado en FireBase. Adicionalmente, muestra una imagen de cargado cuando la página se encuentra en dicho proceso._
+
+### ItemDetail - ItemDetailContainer
+
+_Cumplen la función de setear en pantalla los detalles de los productos seleccionados anteriormente. Adicionalmente, contiene un botón que redirige al cart una vez se hayan agregado productos al carrito. Por otro lado, muestra una imagen mientras se cargan los productos-detalles solicitados._
+
+### ItemCount
+
+_Genera la funcionalidad mediante la cual el usuario puede sumar o restar productos que serán añadidos al carrito, además indica y deshabilita el boton de Agreado cuando un producto se encuentra sin stock o si se intenta colocar un valor menor a 1._
+
+### Cart e ItemCart - CartWidged
+
+_ItemCart es una función que mapea todos los datos asociados a los productos agregados al cart, generando además un subtotal de compra necesario cuando se agregan varios productos del mismo ítem y permitiendo al usuario eliminar items que no desee en su compra._
+
+_El Cart contiene varias funcionalidades: a) Genera un mensaje cuando no hay productos en el carrito e invita al usuario a ver los productosdisponibles; b) Llama a la función ItemCart y genera un total por todos los ítems que fueron agregados al carrito; c) Contiene 3 botones con acción: Vaciar carrito (elimina todos los elementos agregados), Seguir comprando (redirige a la página principal para seguir viendo productos antes de finalizar la compra) y Continuar Compra (redirige al Form para culminar el proceso)._
+
+_El CartWidged muestra una imagen de un carrito desde la cual se puede acceder a los productos agregados al cart, además de llamar a la función de getQuantity, la cual detalla en pantalla la cantidad de productos que se encuentran en el mismo._
+
+### Form
+
+_Es un formulario que solicita los datos del cliente y genera una orden de compra que se dirige a FireBase como una coleeción. Adicionalmente contiene una función para indicar cuando un producto se encuentra sin stock, y un mensaje final una vez realizada la compra._
+
+
+## Funciones Context📋
+
+_Context es usado a lo largo de todo el proyecto. Sus funciones son llamadas en la mayor parte de los componentes, estas son:_
+
+* *addItem*: añade el producto al cart. Con la ayuda de isInCart, realiza una sumatoria sobre los productos iguales que se encuentran en el carrito, caso contrario generaunanueva línea para nuevos productos.
+
+* *getQuantity*: recorre el cart para mostrar en el CartWidget la cantidad de productos añadidos.
+
+* *isInCart*: identifica si el producto se encuentra en el carrito.
+
+* *clearCart*: vacía el carrito.
+
+* *getTotal*: calcula el valor total de la compra.
+
+* *removeItem*: elimina los ítems seleccionados.
+
+
+## Autor ✒️
+
+* **Gina Lutfallah** - [ginlut](https://github.com/ginlut)
+

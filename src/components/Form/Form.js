@@ -19,14 +19,16 @@ const Form =() =>{
     let nombre = document.getElementById('nombre').value;
     let email = document.getElementById('email').value;
     let phone = document.getElementById('phone').value;
-    console.log(nombre, email, phone)
+    let direccion = document.getElementById('direccion').value;
+    console.log(nombre, email, phone, direccion)
 
     const clientData = {
         items: cart,
         buyer: {
             name: nombre,
             phone: phone,
-            email: email
+            email: email,
+            direccion: direccion,
           
           }
 
@@ -70,7 +72,7 @@ const Form =() =>{
             title: '¡Muchas gracias por su compra!',
             text: `El id de la orden es ${id}`,
             showConfirmButton: true,
-            timer: 7000
+            timer: 3000
         })
 
        }).catch(error => {
@@ -82,8 +84,8 @@ const Form =() =>{
 return(
   <div>
     <h1 className='subtitle'>Indícanos tus datos de contacto</h1>
-    <div className='contenedorProductos '>
-        <div className='seccionesPedidos form'>
+    <div className='containerProducts '>
+        <div className='form'>
             <div className='input-group mb-3'>
                 <label className='input-group-text'>Nombre y Apellido:</label>
                 <input type='text' id='nombre' className='form-control' required/>
@@ -95,6 +97,10 @@ return(
             <div className='input-group mb-3'>
                 <label className='input-group-text'>Número telefónico:</label>
                 <input type='text' id='phone'className='form-control' required/>
+            </div>
+            <div className='input-group mb-3'>
+                <label className='input-group-text'>Dirección de entrega:</label>
+                <input type='text' id='direccion'className='form-control' required/>
             </div>
             <NavLink to='/'><button onClick={() => createOrder()}>Generar Orden</button></NavLink>
         </div>
